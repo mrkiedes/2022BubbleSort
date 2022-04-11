@@ -1,3 +1,4 @@
+import random as rand
 def displayList():
     output = "["
     for num in list:
@@ -11,7 +12,16 @@ def swap(i1, i2):
     list[i2] = list[i1]
     list[i1] = uh
 
-list = [7, 13, 6, 4, 27, -58, 11, 29, 12, 21, 11, 10, 8]
+def bubbleSort():
+    for x in range(len(list)-1):
+        for item in range(len(list)-1):
+            if(list[item] > list[item+1]):
+                swap(item, item+1)
+list = []
+for x in range(100):
+    list.append(int(rand.random()*1000))
+
 displayList()
-swap(1, 2)
+bubbleSort()
 displayList()
+
